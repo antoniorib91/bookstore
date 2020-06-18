@@ -1,0 +1,3 @@
+<label [attr.for]="Id" *ngIf="label" >{{ label }}</label>
+<input class="form-control" [type]="type" [name]="Name" [id]="Id" #input (input)="onInput($event)">
+<ng-content></ng-content>

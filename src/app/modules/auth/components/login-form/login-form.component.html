@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <h3 class="spaced text-center">Bem vindo a Bookstore!</h3>
+        <form [formGroup]="form">
+          <div class="form-group">
+            <app-input-text label="Login:" Id="login" Name="login" formControlName="login">
+              <p class="text-danger" *ngIf="submitted && login.errors && login.errors.required" >
+                Campo Obrigatório
+              </p>
+            </app-input-text>
+          </div>
+          <div class="form-group">
+            <app-input-text label="Senha:" Id="pass" Name="pass" type="password" formControlName="pass">
+              <p class="text-danger" *ngIf="submitted && pass.errors && pass.errors.required" >
+                Campo Obrigatório
+              </p>
+            </app-input-text>
+          </div>
+        </form>
+          <app-button class="d-none d-md-block d-lg-block d-xl-block float-right spaced" size="normal" (click)="onClickLogar()">Logar</app-button>
+          <app-button class="d-lg-none d-md-none spaced" (click)="onClickLogar()">Logar</app-button>
+      </div>
+    </div>
+  </div>
+</div>
