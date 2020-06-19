@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: '/src/app/modules/auth/auth.module#AuthModule'
+  },
+  {
+    path: 'books',
+    loadChildren: () => import('./modules/books/books.module').then(m => m.BooksModule)
   }
 ];
 

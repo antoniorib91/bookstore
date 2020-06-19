@@ -30,12 +30,16 @@ export class LoginFormComponent implements OnInit {
     return this.form.get('pass');
   }
 
-  public onClickLogar() {
+  public onClickLogar(): void {
     this.submitted = true;
     if (this.service.isValidForm(this.form)) {
-      this.router.navigate(['/home']);
+      this.authenticate();
     }
     return;
+  }
+
+  private authenticate(): void {
+    this.router.navigate(['/books']);
   }
 
 }
