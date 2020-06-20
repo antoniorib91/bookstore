@@ -11,15 +11,19 @@ export class BookListComponent implements OnInit {
 
   public books: Array<Book> = [
     {
+      id: 'asdqwe1',
       name: 'I Am Enough',
       image: 'https://images-na.ssl-images-amazon.com/images/I/51AbnWTJ5nL._SX258_BO1,204,203,200_.jpg',
       price: 13.28,
+      author: 'Amelia Hepworth',
       description: 'This gorgeous, lyrical ode to loving who you are, respecting others, and being kind to one another comes from Empire actor and activist Grace Byers and talented newcomer artist Keturah A. Bobo.'
     },
     {
+      id: 'adrt21q',
       name: 'I Love You to the Moon and Back',
       image: 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
       price: 5.35,
+      author: 'Grace Byers',
       description: 'The sun rises, and a bear and cub begin their day together. They splash in the water, climb mountains, and watch the shimmering sky. They show their love by touching noses, playing chase, and of course, hugging. A sweet, gentle rhyme, perfect for sharing with a special little one!'
     }
   ];

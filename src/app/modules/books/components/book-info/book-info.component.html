@@ -1,12 +1,13 @@
-<div class="card">
-  <div class="card-body">
+<div class="card book">
+  <div class="card-body book-info">
     <div class="card-image">
-      <img [src]="book.image" class="img-fluid">
+      <img [src]="book.image" class="img-fluid mx-auto d-xs-flex d-sm-flex d-md-none large">
+      <img [src]="book.image" class="img-fluid mx-auto d-none d-md-flex d-lg-flex d-xl-flex small">
     </div>
-    <div>
-      <label><b>{{ book.name }}</b></label>
-      <i>{{ book.price }}</i>
-      <p>{{ book.description }}</p>
+    <div class="book-box">
+      <a href="#" (click)="onClickBookName($event, book.id)"><span class="book-box__title">{{ book.name }}</span></a>
+      <span>{{ book.author }}</span>
+      <span class="book-box__price"><small>{{ getMoneySymbol() }}</small>{{ book.price }}</span>
     </div>
   </div>
 </div>

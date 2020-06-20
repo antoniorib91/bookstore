@@ -6,10 +6,11 @@ import { BooksComponent } from './components/books/books.component';
 import { BookListComponent } from './components/book-list/book-list.component';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BookInfoComponent } from './components/book-info/book-info.component';
+import { BooksFilterComponent } from './components/books-filter/books-filter.component';
 
 
 @NgModule({
-  declarations: [BooksComponent, BookListComponent, BookDetailComponent, BookInfoComponent],
+  declarations: [BooksComponent, BookListComponent, BookDetailComponent, BookInfoComponent, BooksFilterComponent],
   imports: [
     CommonModule,
     BooksRoutingModule
