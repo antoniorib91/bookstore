@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { LoginFormService } from '../../services/login-form.service';
-import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -14,8 +14,8 @@ export class LoginFormComponent implements OnInit {
   public submitted = false;
 
   constructor(
-    private router: Router,
     private service: LoginFormService,
+    private authService: AuthService
     ) { }
 
   ngOnInit(): void {
@@ -33,13 +33,11 @@ export class LoginFormComponent implements OnInit {
   public onClickLogar(): void {
     this.submitted = true;
     if (this.service.isValidForm(this.form)) {
-      this.authenticate();
+      this.authService.doLogin();
     }
     return;
   }
 
-  private authenticate(): void {
-    this.router.navigate(['/books']);
-  }
+
 
 }

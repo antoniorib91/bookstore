@@ -12,7 +12,7 @@ export class ButtonComponent implements OnInit {
   public type: 'button' | 'submit' = 'button';
 
   @Input()
-  public color: 'blue' | 'gray' = 'blue';
+  public color: 'blue' | 'gray' | 'yellow' = 'blue';
 
   @Input()
   public size: 'normal' | 'auto' = 'auto';
