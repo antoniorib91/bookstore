@@ -6,7 +6,7 @@
   <div class="desktop d-none d-md-flex d-lg-flex d-xl-flex">
     <app-title class="title" size="large">B<small>oo</small>kS<small>tor</small>e</app-title>
     <app-books-filter class="filter-bar"></app-books-filter>
-    <a href="#" class="sign-out">Sign out</a>
+    <a href="#" class="sign-out" (click)="onClickSignout($event)">Sign out</a>
   </div>
 </header>
 <main>

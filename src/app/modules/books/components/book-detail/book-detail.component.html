@@ -1,1 +1,28 @@
-<p>book-detail works!</p>
+<div class="book-detail">
+  <div class="modal-header">
+    <h6 class="modal-title pull-left">{{ book.name }}</h6>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="onCloceClick()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-xl-6 col-12">
+        <img [src]="book.image" class="img-fluid book-detail__image">
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-6 col-12">
+        <div class="book-detail__info">
+          <h6>{{ book.author }}</h6>
+          <p class="book-detail__description">{{ book.description }}</p>
+          <div class="book-detail__box" *ngIf="book.state === 0" (click)="onClickRent()" >
+            Rent this book
+            <span class="book-detail__price"><small>{{ getMoneySymbol() }}</small>{{ book.price }}</span>
+          </div>
+          <div class="book-detail__box" *ngIf="book.state !== 0" >
+            Sorry, this are indisponible to rent
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

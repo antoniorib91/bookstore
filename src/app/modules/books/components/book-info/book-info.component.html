@@ -5,12 +5,9 @@
       <img [src]="book.image" class="img-fluid mx-auto d-none d-md-flex d-lg-flex d-xl-flex small">
     </div>
     <div class="book-box">
-      <a href="#" (click)="onClickBookName($event, book.id)"><span class="book-box__title">{{ book.name }}</span></a>
+      <a href="#" (click)="onClickBookName($event, book)"><span class="book-box__title">{{ book.name }}</span></a>
       <span>{{ book.author }}</span>
       <span class="book-box__price"><small>{{ getMoneySymbol() }}</small>{{ book.price }}</span>
-      <app-button color="yellow">
-        Rent this book
-      </app-button>
     </div>
   </div>
 </div>

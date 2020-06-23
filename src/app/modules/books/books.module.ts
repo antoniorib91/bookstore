@@ -8,7 +8,7 @@ import { BookDetailComponent } from './components/book-detail/book-detail.compon
 import { BookInfoComponent } from './components/book-info/book-info.component';
 import { BooksFilterComponent } from './components/books-filter/books-filter.component';
 import { SharedModule } from '../shared/shared.module';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
+    ModalModule.forRoot(),
     BooksRoutingModule
   ]
 })

@@ -13,4 +13,12 @@ export class BooksRestService {
   public getBooks(): Observable<Array<Book>> {
     return of(BooksMock);
   }
+
+  public postBooks(data: Book) {
+    return of(true);
+  }
+
+  public putBooks(data: Book) {
+    return of(true);
+  }
 }
