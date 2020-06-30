@@ -9,6 +9,9 @@ import { BookInfoComponent } from './components/book-info/book-info.component';
 import { BooksFilterComponent } from './components/books-filter/books-filter.component';
 import { SharedModule } from '../shared/shared.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BookHeaderComponent } from './components/book-header/book-header.component';
+import { BookNewComponent } from './components/book-new/book-new.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,15 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BookListComponent,
     BookDetailComponent,
     BookInfoComponent,
-    BooksFilterComponent
+    BooksFilterComponent,
+    BookHeaderComponent,
+    BookNewComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
     ModalModule.forRoot(),
     BooksRoutingModule
   ]

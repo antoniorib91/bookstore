@@ -1,7 +1,7 @@
 <div class="book-detail">
   <div class="modal-header">
     <h6 class="modal-title pull-left">{{ book.name }}</h6>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="onCloceClick()">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="onCloseClick()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -15,11 +15,11 @@
           <h6>{{ book.author }}</h6>
           <p class="book-detail__description">{{ book.description }}</p>
           <div class="book-detail__box" *ngIf="book.state === 0" (click)="onClickRent()" >
-            Rent this book
+            {{ defaultRentMessage }}
             <span class="book-detail__price"><small>{{ getMoneySymbol() }}</small>{{ book.price }}</span>
           </div>
           <div class="book-detail__box" *ngIf="book.state !== 0" >
-            Sorry, this are indisponible to rent
+            {{ defaultCantRentMessage }}
           </div>
         </div>
       </div>

@@ -1,0 +1,9 @@
+.image {
+  width: 100px;
+  height: 100px;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}

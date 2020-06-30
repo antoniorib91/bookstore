@@ -1,5 +1,5 @@
 <div class="row">
-  <ng-container *ngFor="let book of books | async" >
+  <ng-container *ngFor="let book of books" >
     <div class="col-md-2 col-lg-2 col-sm-6 col-xs-12">
       <app-book-info [book]="book"></app-book-info>
     </div>

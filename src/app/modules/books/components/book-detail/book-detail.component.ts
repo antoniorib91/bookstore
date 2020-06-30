@@ -15,6 +15,8 @@ import { Subscription } from 'rxjs';
 export class BookDetailComponent implements OnInit, OnDestroy {
 
   public book: Book;
+  public defaultRentMessage = 'Rent this book';
+  public defaultCantRentMessage = 'Sorry, this book is indisponible to rent';
 
   private subscription: Subscription;
 
@@ -31,7 +33,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  public onCloceClick() {
+  public onCloseClick() {
     this.modalRef.hide();
   }
 
@@ -40,7 +42,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
   }
 
   public onClickRent() {
-    this.book.state = BookState.rent;
+    this.book.state = BookState.rented;
     this.restService.putBooks(this.book).subscribe(
       res => this.modalRef.hide(),
       err => console.log('Error')

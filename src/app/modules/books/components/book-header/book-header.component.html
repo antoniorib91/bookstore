@@ -1,0 +1,21 @@
+<div class="mobile d-sm-flex d-flex d-lg-none d-md-none d-xl-none justify-content-center">
+  <div>
+    <app-title class="title" size="large">B<small>oo</small>kS<small>tor</small>e</app-title>
+    <app-button color="transparent" size="none" class="bars-button" (click)="onClickBars()">
+      <i class="fas fa-bars"></i>
+    </app-button>
+    <div class="mobile-options" [ngClass]="!hideMobMenu ? 'show': ''" >
+      <a href="#" class="sign-out" (click)="onClickAddBook($event)">Add Book</a>
+      <a href="#" class="sign-out" (click)="onClickSignout($event)">Sign out</a>
+    </div>
+  </div>
+  <app-books-filter></app-books-filter>
+</div>
+<div class="desktop d-none d-md-flex d-lg-flex d-xl-flex">
+  <app-title class="title" size="large">B<small>oo</small>kS<small>tor</small>e</app-title>
+  <app-books-filter class="filter-bar"></app-books-filter>
+  <div class="options-bar">
+    <a href="#" class="sign-out" (click)="onClickAddBook($event)">Add Book</a>
+    <a href="#" class="sign-out" (click)="onClickSignout($event)">Sign out</a>
+  </div>
+</div>
