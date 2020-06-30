@@ -1,3 +1,4 @@
-<label [attr.for]="Id" *ngIf="label" >{{ label }}</label>
-<input class="form-control" [type]="type" [name]="Name" [id]="Id" #input (input)="onInput($event)">
+<label [attr.for]="inputId ? inputId : hash" *ngIf="label" >{{ label }}</label>
+<input class="form-control" [type]="type" [name]="inputName ? inputName : hash"
+[id]="inputId ? inputId : hash" #input [value]="value" (input)="onInput($event)" appInputOnlyNumber [isActive]="onlyNumber">
 <ng-content></ng-content>

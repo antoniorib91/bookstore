@@ -1,8 +1,8 @@
-<div class="input-group search-bar">
-  <input class="form-control input search" type="text" placeholder="Search" name="search" id="search_1">
-  <div class="input-group-append">
-    <button class="btn btn-outline-dark" type="button">
-      <i class="fas fa-search"></i>
-    </button>
+<div class="books-search-bar">
+  <app-input-search [(ngModel)]="search" dropdownLabel="Filters" [dropdownOptions]="dropdownOptions"
+  (onselect)="handleSelectFilter($event)" (onsearch)="handleSearch()" [disabled]="disableInput" [disableOnlyInput]="true"
+  ></app-input-search>
+  <div>
+    <a class="text-danger clear-filters" *ngIf="hasFilter" (click)="onClickClearFilters()" >Clear filters</a>
   </div>
 </div>

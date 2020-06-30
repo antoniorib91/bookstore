@@ -1,4 +1,3 @@
-import { AuthService } from './../../../auth/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,14 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  constructor(
-    private authService: AuthService
-  ) { }
+  constructor() {}
 
   ngOnInit(): void {}
 
-  public onClickSignout(event: any) {
-    event.preventDefault();
-    this.authService.doLoggout();
-  }
 }

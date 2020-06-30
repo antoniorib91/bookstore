@@ -1,11 +1,10 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, ViewChild, forwardRef, ElementRef, ViewChildren } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, ViewChild, forwardRef, ElementRef, ViewChildren, ContentChild } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-input-text',
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -20,16 +19,21 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
   public label: string;
 
   @Input()
-  public Name: string;
+  public inputName: string;
 
   @Input()
-  public Id: string;
+  public inputId: string;
+
+  @Input()
+  public onlyNumber: boolean;
 
   @Input()
   public type: 'text' | 'password' = 'text';
 
   @Input()
   public disabled: boolean;
+
+  public hash: string = this.generateRandomId();
 
   private ctrlValue: any = '';
 
@@ -71,6 +75,10 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
     this.value = value;
     this.onChange(value);
     this.onTouch(value);
+  }
+
+  private generateRandomId() {
+    return Math.random().toString(36).substr(2, 5);
   }
 
 }

@@ -1,45 +1,79 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { Book } from 'src/app/models/book.model';
-import { Observable, of, Subscription } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 import { BooksRestService } from '../../service/books-rest.service';
+import { BooksService } from '../../service/books.service';
+import { BooksFilterService } from '../../service/books-filter.service';
 
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookListComponent implements OnInit, OnDestroy {
 
-  public books: Observable<Array<Book>>;
+  public books: Array<Book> = [];
+  public storeBooks: Array<Book> = [];
+
 
   private subscription: Subscription;
+  private bookSubscription: Subscription;
+  private storeBookSubscription: Subscription;
 
   constructor(
-    private restService: BooksRestService
+    private service: BooksService,
+    private restService: BooksRestService,
+    private filterService: BooksFilterService
   ) { }
 
   ngOnInit(): void {
-    this.loadBooks();
+    this.getBooks();
+    this.getBooksSubscription();
+    this.getStoreBooksSubscription();
   }
 
   ngOnDestroy() {
-    if (this.subscription && !this.subscription.closed) {
-      this.subscription.unsubscribe();
-    }
+    this.service.unsubscribe(this.subscription);
+    this.service.unsubscribe(this.bookSubscription);
+    this.service.unsubscribe(this.storeBookSubscription);
   }
 
   public onClickMoreBooks() {
-    this.books = this.books.pipe(
-      switchMap(res => this.restService.getBooks().pipe(
-        switchMap(res2 => of(res.concat(res2)))
-      ))
+    this.getBooks();
+  }
+
+  private getBooks() {
+    this.restService.getBooks().subscribe(
+      res => this.handleResponseSuccess(res),
+      err => this.handleResponseError(err)
     );
   }
 
-  private loadBooks() {
-    this.books = this.restService.getBooks();
+  private getBooksSubscription() {
+    this.bookSubscription = this.service.getBooks().subscribe(
+      books => this.books = books,
+      err => console.log(err)
+    );
+  }
+
+  private getStoreBooksSubscription() {
+    this.storeBookSubscription = this.service.getStoreBooksList().subscribe(
+      books => this.storeBooks = books,
+      err => console.log(err)
+    );
+  }
+
+  private handleResponseSuccess(response: Array<Book>) {
+    if (this.storeBooks) {
+      this.service.setBooks(this.filterService.filterWithLastFilters(this.books.concat(response)));
+      this.service.setStoreBooksList(this.storeBooks.concat(response));
+    } else {
+      this.service.setStoreBooksList(response);
+    }
+  }
+
+  private handleResponseError(err: any) {
+    console.log(err);
   }
 
 }

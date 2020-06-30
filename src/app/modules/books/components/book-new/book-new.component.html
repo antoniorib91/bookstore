@@ -1,0 +1,49 @@
+<div class="book-new">
+  <div class="modal-header">
+    <h6 class="modal-title pull-left"> {{ form.get('name').value ? form.get('name').value : 'New Book' }}</h6>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="onCloseClick()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+          <div class="form-group">
+            <label for="name">Book name:</label>
+            <app-input-text id="name" formControlName="name">
+              <small id="nameError" class="form-text text-danger" *ngIf="showRequiredErrors('name')" >This field is required.</small>
+            </app-input-text>
+          </div>
+          <div class="form-group">
+            <label for="author">Book author:</label>
+            <app-input-text id="author" formControlName="author"></app-input-text>
+            <small id="authorError" class="form-text text-danger" *ngIf="showRequiredErrors('author')">This field is required.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Book price:</label>
+            <app-input-text id="price" formControlName="price" [onlyNumber]="true"></app-input-text>
+            <small id="priceError" class="form-text text-danger" *ngIf="showRequiredErrors('price')" >This field is required.</small>
+          </div>
+          <div class="form-group">
+            <label for="description">Book description:</label>
+            <textarea class="form-control" id="description" formControlName="description"></textarea>
+            <small id="priceError" class="form-text text-danger" *ngIf="showRequiredErrors('description')">This field is required.</small>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-8">
+              <label for="image">Book image url:</label>
+              <app-input-text id="image" formControlName="image" (input)="handleImageChange($event)"></app-input-text>
+              <small id="priceError" class="form-text text-danger" *ngIf="showRequiredErrors('image')">This field is required.</small>
+            </div>
+            <div class="form-group col-4">
+              <img [src]="imgUrl" class="image" [ngClass]="imgUrl ? 'show': ''"  />
+            </div>
+          </div>
+          <h5 class="text-danger" *ngIf="hasError" >An unexpected error occurred when try to send your data.</h5>
+          <app-button type="submit" class="float-right" color="gray">Submit</app-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+      (click)="onClickDropdown()" [attr.disabled]="isButtonsDisabled()" >
+      {{ selected ? selected : dropdownLabel }}
+    </button>
+    <div class="dropdown-menu" [ngClass]="!hideDropdown ? 'show': ''"  >
+      <ng-container *ngFor="let options of dropdownOptions">
+        <a class="dropdown-item" [ngClass]="isSelected(options)" (click)="onClickOptions(options)">{{options}}</a>
+      </ng-container>
+    </div>
+  </div>
+  <input class="form-control input" type="text" [name]="inputName ? inputName : hash" [id]="inputId ? inputId : hash"
+  [placeholder]="placeholder" (input)="onInput($event)" [attr.disabled]="isDisabled()" [value]="value" >
+  <div class="input-group-append">
+    <button class="btn btn-outline-dark" type="button" (click)="onClickSearch()" [attr.disabled]="isButtonsDisabled()" >
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>

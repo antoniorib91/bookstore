@@ -1,5 +1,9 @@
 .spaced {
   margin: 20px 0px;
+
+  &.mobile {
+    width: 100%;
+  }
 }
 
 .card-body {
