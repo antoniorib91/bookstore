@@ -1,0 +1,119 @@
+[
+  {
+    "id": "asdqwe1",
+    "name": "I Am Enough",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51AbnWTJ5nL._SX258_BO1,204,203,200_.jpg",
+    "price": 13.28,
+    "author": "Amelia Hepworth",
+    "description": "This gorgeous, lyrical ode to loving who you are, respecting others, and being kind to one another comes from Empire actor and activist Grace Byers and talented newcomer artist Keturah A. Bobo.",
+    "state": 0
+  },
+  {
+    "id": "adrt21q",
+    "name": "I Love You to the Moon and Back",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg",
+    "price": 5.35,
+    "author": "Grace Byers",
+    "description": "The sun rises, and a bear and cub begin their day together. They splash in the water, climb mountains, and watch the shimmering sky. They show their love by touching noses, playing chase, and of course, hugging. A sweet, gentle rhyme, perfect for sharing with a special little one!",
+    "state": 0
+  },
+  {
+    "id": "1235sdfsdq",
+    "name": "Me: Elton John Official Autobiography",
+    "image": "https://m.media-amazon.com/images/I/41TJxOmPRjL.jpg",
+    "price": 9.39,
+    "author": "Elton John",
+    "description": "In his first and only official autobiography, music icon Elton John reveals the truth about his extraordinary life, from his rollercoaster lifestyle as shown in the film Rocketman, to becoming a living legend.",
+    "state": 0
+  },
+  {
+    "id": "4sdr2123",
+    "name": "Becoming",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/414JfiBCutL._SX327_BO1,204,203,200_.jpg",
+    "price": 9.39,
+    "author": "Michelle Obama",
+    "description": "An intimate, powerful, and inspiring memoir by the former First Lady of the United States",
+    "state": 0
+  },
+  {
+    "id": "xxcfwr123",
+    "name": "We're Different, We're the Same (Sesame Street) (Pictureback(R))",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61-8IllhPlL._SX258_BO1,204,203,200_.jpg",
+    "price": 3.12,
+    "author": "Bobbi Kates",
+    "description": "Who better than Sesame Street to teach us that we may all look different on the outside—but it's important to remember that deep down, we are all very much alike. We all have the same needs, desires, and feelings. Elmo and his Sesame Street friends help teach toddlers and the adults in their lives that everyone is the same on the inside, and it's our differences that make this wonderful world, which is home to us all, an interesting—and special—place. This enduring, colorful, and charmingly illustrated book offers an easy, enjoyable way to learn about differences—and what truly matters. It is an engaging read for toddlers and adults alike.",
+    "state": 0
+  },
+  {
+    "id": "557hgjgh",
+    "name": "Dune (Dune Chronicles, Book 1)",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41UZeCEKOBL._SX331_BO1,204,203,200_.jpg",
+    "price": 9.99,
+    "author": "Frank Herbert",
+    "description": "Frank Herbert’s classic masterpiece—a triumph of the imagination and one of the bestselling science fiction novels of all time.",
+    "state": 0
+  },
+  {
+    "id": "77dftre",
+    "name": "The Water Dancer (Oprah's Book Club): A Novel",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51ItgiZw5dL._SX327_BO1,204,203,200_.jpg",
+    "price": 9.41,
+    "author": "Ta-Nehisi Coates",
+    "description": "#1 NEW YORK TIMES BESTSELLER • OPRAH’S BOOK CLUB PICK • From the National Book Award–winning author of Between the World and Me, a boldly conjured debut novel about a magical gift, a devastating loss, and an underground war for freedom.",
+    "state": 0
+  },
+  {
+    "id": "0075hgjgh",
+    "name": "The Summer House",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51bKp5ZcwTL._SX318_BO1,204,203,200_.jpg",
+    "price": 14.99,
+    "author": "James Patterson",
+    "description": "When seven murder victims are found in a small town, the homicide investigation shakes a small-town sheriff to her core in James Patterson's tense thriller.",
+    "state": 0
+  },
+  {
+    "id": "nvftrft3",
+    "name": "The Witcher Boxed Set: Blood of Elves, The Time of Contempt, Baptism of Fire",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51iYAkshPAL._SX410_BO1,204,203,200_.jpg",
+    "price": 26.99,
+    "author": "Andrzej Sapkowski",
+    "description": "This special boxed set includes the first three novels in Andrzej Sapkowski's NYT bestselling epic fantasy saga -- the books that introduced the world to The Witcher and inspired the hit video games.",
+    "state": 0
+  },
+  {
+    "id": "ljhjhy54",
+    "name": "A Game of Thrones / A Clash of Kings / A Storm of Swords / A Feast of Crows / A Dance with Dragons",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61iRBvRYEcL._SX258_BO1,204,203,200_.jpg",
+    "price": 25.38,
+    "author": "George R. R. Martin ",
+    "description": "An immersive entertainment experience unlike any other, A Song of Ice and Fire has earned George R. R. Martin—dubbed “the American Tolkien” by Time magazine—international acclaim and millions of loyal readers.",
+    "state": 0
+  },
+  {
+    "id": "nmbt65dr",
+    "name": "The Elder Scrolls: The Official Cookbook",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51QrOv74FOL._SX398_BO1,204,203,200_.jpg",
+    "price": 20.61,
+    "author": "Chelsea Monroe-Cassel",
+    "description": "Feast on all of the delicious dishes found in Skyrim, Morrowind, and all of Tamriel in this beautifully crafted cookbook based on the award-winning Elder Scrolls game series. Immerse yourself in the diverse cuisines of the Nords, Bosmer, Khajit, and beyond with these recipes inspired by food found in the Old Kingdom, across Tamriel, and more. With over sixty delicious recipes for fan-favorite recipes including Apple Cabbage Stew, Sunlight Souffle, Sweetrolls, and more, The Elder Scrolls: The Official Cookbook will delight every hungry Dragonborn. ",
+    "state": 0
+  },
+  {
+    "id": "lluiu64",
+    "name": "The Lord of the Rings: The Fellowship of the Ring, The Two Towers, The Return of the King",
+    "image": "https://m.media-amazon.com/images/I/41gqJ6z++uL.jpg",
+    "price": 16.99,
+    "author": "J. R. R. Tolkien",
+    "description": "Sauron, the Dark Lord, has gathered to him all the Rings of Power – the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring – the ring that rules them all – which has fallen into the hands of the hobbit, Bilbo Baggins.",
+    "state": 0
+  },
+  {
+    "id": "dcvdre345",
+    "name": "The Name of the Wind: Kingkiller Chronicle, Book 1",
+    "image": "https://m.media-amazon.com/images/I/61Csiq-T2hL.jpg",
+    "price": 6.14,
+    "author": "Patrick Rothfuss",
+    "description": "My name is Kvothe. I have stolen princesses back from sleeping barrow kings. I burned down the town of Trebon. I have spent the night with Felurian and left with both my sanity and my life. I was expelled from the University at a younger age than most people are allowed in. I tread paths by moonlight that others fear to speak of during day. I have talked to Gods, loved women, and written songs that make the minstrels weep.",
+    "state": 0
+  }
+]

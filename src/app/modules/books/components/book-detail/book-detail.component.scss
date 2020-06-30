@@ -1,0 +1,44 @@
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+
+.book-detail {
+  font-size: 13px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__description {
+    font-size: 11.5px;
+  }
+
+  &__image {
+    display: block;
+    margin: auto;
+    max-height: 250px;
+  }
+
+  &__price {
+    font-size: 24px;
+  }
+
+  &__box {
+    cursor: pointer;
+    border: 1px solid #b1b1b1c7;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px;
+    padding: 10px;
+    margin-top: auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

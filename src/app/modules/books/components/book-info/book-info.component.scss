@@ -1,0 +1,37 @@
+.book {
+  border: none;
+  font-size: 13px;
+
+  .book-info {
+    min-height: 300px;
+    .card-image {
+      .img-fluid {
+        display: flex;
+        &.small {
+          height: 150px;
+        }
+
+        &.large {
+          height: 250px;
+        }
+      }
+    }
+
+    .book-box {
+      display: flex;
+      min-height: 125px;
+      flex-direction: column;
+      text-align: center;
+      &__title {
+        font-weight: bold;
+        color: black;
+      }
+
+      &__price {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+

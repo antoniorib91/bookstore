@@ -1,0 +1,14 @@
+<header>
+  <div class="mobile d-sm-flex d-flex d-lg-none d-md-none d-xl-none justify-content-center">
+    <app-title class="title" size="large">B<small>oo</small>kS<small>tor</small>e</app-title>
+    <app-books-filter></app-books-filter>
+  </div>
+  <div class="desktop d-none d-md-flex d-lg-flex d-xl-flex">
+    <app-title class="title" size="large">B<small>oo</small>kS<small>tor</small>e</app-title>
+    <app-books-filter class="filter-bar"></app-books-filter>
+    <a href="#" class="sign-out" (click)="onClickSignout($event)">Sign out</a>
+  </div>
+</header>
+<main>
+  <app-book-list></app-book-list>
+</main>
