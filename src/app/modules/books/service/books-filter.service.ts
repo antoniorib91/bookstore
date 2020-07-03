@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { switchMap } from 'rxjs/operators';
-import { of, Observable } from 'rxjs';
 import { Book } from 'src/app/models/book.model';
 import { BookState } from 'src/app/enums/book-state.enum';
 
