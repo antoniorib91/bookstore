@@ -47,7 +47,6 @@ export class BookDetailComponent implements OnInit, OnDestroy {
       res => this.modalRef.hide(),
       err => console.log('Error')
     );
-    // todo alterar, chamar serviço que cuida dos livros para alterar o estado
   }
 
 }

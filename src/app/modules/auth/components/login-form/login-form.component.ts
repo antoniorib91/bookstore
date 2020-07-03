@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { LoginFormService } from '../../services/login-form.service';
 import { AuthService } from '../../services/auth.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login-form',
@@ -10,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginFormComponent implements OnInit {
 
-  public form: any;
+  public form: FormGroup;
   public submitted = false;
 
   constructor(

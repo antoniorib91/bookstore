@@ -67,7 +67,7 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
 
   public onInput(event: any) {
     let value: string = event.target.value;
-    value = value.trim();
+    value = value;
     this.updateValues(value);
   }
 
