@@ -6,7 +6,9 @@ import books from 'src/mocks/books.json';
 
 describe('BooksFilterService', () => {
   let service: BooksFilterService;
-  const mockBooks = [books[0], books[1]];
+  const mock1 = Object.assign({}, books[0]);
+  const mock2 = Object.assign({}, books[1]);
+  const mockBooks = [mock1, mock2];
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
@@ -60,7 +62,7 @@ describe('BooksFilterService', () => {
         service.lastSearch = 'Amelia Hepworth';
         const subject = service.filterBooks(mockBooks, service.lastFilter, service.lastSearch);
         expect(subject.length).toBe(1);
-        expect(subject).toEqual([books[0]]);
+        expect(subject).toEqual([mockBooks[0]]);
       });
     });
 
@@ -77,7 +79,7 @@ describe('BooksFilterService', () => {
       it('Should return filtered books...', () => {
         const subject = service.filterBooks(mockBooks, service.lastFilter, service.lastSearch);
         expect(subject.length).toBe(1);
-        expect(subject).toEqual([books[1]]);
+        expect(subject).toEqual([mockBooks[1]]);
       });
 
     });
@@ -95,7 +97,7 @@ describe('BooksFilterService', () => {
       it('Should return filtered books...', () => {
         const subject = service.filterBooks(mockBooks, service.lastFilter, service.lastSearch);
         expect(subject.length).toBe(1);
-        expect(subject).toEqual([books[1]]);
+        expect(subject).toEqual([mockBooks[1]]);
       });
     });
 
@@ -112,7 +114,7 @@ describe('BooksFilterService', () => {
       it('Should return filtered books...', () => {
         const subject = service.filterBooks(mockBooks, service.lastFilter, service.lastSearch);
         expect(subject.length).toBe(1);
-        expect(subject).toEqual([books[0]]);
+        expect(subject).toEqual([mockBooks[0]]);
       });
     });
 
@@ -128,7 +130,7 @@ describe('BooksFilterService', () => {
       it('Should return filtered books...', () => {
         const subject = service.filterBooks(mockBooks, service.lastFilter, service.lastSearch);
         expect(subject.length).toBe(2);
-        expect(subject).toEqual([books[0], books[1]]);
+        expect(subject).toEqual([mockBooks[0], mockBooks[1]]);
       });
     });
 

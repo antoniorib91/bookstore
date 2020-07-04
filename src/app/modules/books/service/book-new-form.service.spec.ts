@@ -98,7 +98,7 @@ describe('BookNewFormService', () => {
 
   describe('#generateRandomId =>', () => {
     it('Should return an string...', () => {
-
+      expect(typeof service.generateRandomId()).toBe('string');
     });
   });
 });

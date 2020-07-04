@@ -8,9 +8,7 @@ COPY . .
 
 RUN npm install
 
-RUN npm run test
-
-RUN npm run build:prd
+RUN npm run build-prd
 
 ADD . .
 
