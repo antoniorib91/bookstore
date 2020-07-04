@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prd": "ng build --prod",
     "test": "ng test",
+    "test-docker": "ng test --browsers ChromeHeadless --watch false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
