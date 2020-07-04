@@ -1,27 +1,47 @@
 # Bookstore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Bookstore Library, made with angular 9 and Node. To run this project you need
 
-## Development server
+to install Angular-CLI an nodej with npm.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Running with container
 
-## Code scaffolding
+Firts you need do build docker image with the command above.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+docker build -t bookstore-ui .
+```
 
-## Build
+if you need to see docker images o your computer you can do
+with this command
+```
+docker images
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+to Run de server just run
 
-## Running unit tests
+``` 
+docker docker run -p 4000:4000 bookstore-ui
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+after the build you can access the localhost on 4000
 
-## Running end-to-end tests
+```
+http://localhost:4000
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Running Local
 
-## Further help
+`ng serve` - Runs the Dev Server on localhost:4200
+`ng test` - Runs unit tests of this project
+`ng build` - Build the project
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you don't want to use dev server of angular, you can run 
+```
+ng test
+```
+
+And use node to runs my app
+```
+  node server.js
+```
