@@ -36,18 +36,15 @@ http://localhost:4000
 
 ## Running Local
 
-`ng serve` - Runs the Dev Server on localhost:4200
+` ng serve` - Runs the Dev Server on localhost:4200
 
-`ng test` - Runs unit tests of this project
+` ng test` - Runs unit tests of this project
 
-`ng build` - Build the project
+` ng build` - Build the project
 
-If you don't want to use dev server of angular, you can run 
-```
- ng test
-```
-
-And use node to runs my app
+if you don't want to use dev server of angular, you can run ng build and use node to runs my app
 ```
  node server.js
 ```
+
+
