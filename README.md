@@ -44,10 +44,10 @@ http://localhost:4000
 
 If you don't want to use dev server of angular, you can run 
 ```
-ng test
+ ng test
 ```
 
 And use node to runs my app
 ```
-  node server.js
+ node server.js
 ```
